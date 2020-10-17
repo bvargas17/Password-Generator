@@ -1,3 +1,16 @@
+// Get user info from prompts
+let length = prompt ("How many characters do you need?");
+let lowerCase = confirm ("Would you like lower case letters?");
+let upperCase = confirm ("Would you like upper case letters?");
+let numbers = confirm ("Would you like numbers?");
+let specialCharacters = confirm("Would you like special characters?");
+
+
+
+
+
+
+
 // Assignment Code
 let generateBtn = document.querySelector("#generate");
 
