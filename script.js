@@ -13,17 +13,21 @@ function generatePassword() {
   let desiredNumbers = confirm("Would you like numbers?");
   let desiredSpecialCharacters = confirm("Would you like special characters?");
   let desiredLength = prompt("How many characters do you need between 8 and 128?");
+  
+  // converts the desirdLength string into a number  
+  let howLong = desiredLength * 1;
+  
   //makes sure the number chosen is between 8 and 128
     if (desiredLength < 8 || desiredLength > 128 ) {
       alert ("Lenght needs to be within 8 and 128 characters.");
       return;
     };
   // makes sure the value entered is actually a number  
-    if ( Number.isNaN(desiredLength) === false ){
+    if ( Number.isNaN(howLong) === true ){
       alert ("Needs to be a number.");
+      return;
     };
-  // converts the desirdLength string into a number  
-  let howLong = desiredLength * 1;
+ 
 
   // Create arrays
   let lowerCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
