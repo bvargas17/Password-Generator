@@ -1,11 +1,10 @@
-//alert("this works");
-
 // Assignment Code
 let generateBtn = document.querySelector("#generate");
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// Generate password function 
 function generatePassword() {
   
   // Get user info from prompts
@@ -14,14 +13,16 @@ function generatePassword() {
   let desiredNumbers = confirm("Would you like numbers?");
   let desiredSpecialCharacters = confirm("Would you like special characters?");
   let desiredLength = prompt("How many characters do you need between 8 and 128?");
+  //makes sure the number chosen is between 8 and 128
     if (desiredLength < 8 || desiredLength > 128 ) {
       alert ("Lenght needs to be within 8 and 128 characters.");
       return;
     };
+  // makes sure the value entered is actually a number  
     if ( Number.isNaN(desiredLength) === false ){
       alert ("Needs to be a number.");
     };
-
+  // converts the desirdLength string into a number  
   let howLong = desiredLength * 1;
 
   // Create arrays
@@ -58,9 +59,9 @@ function generatePassword() {
     }
   }
 
-  console.log(collector);
+  //console.log(collector);
   let password = collector.join("");
-  console.log(password);
+  //console.log(password);
   return password;
 }
 // random function
